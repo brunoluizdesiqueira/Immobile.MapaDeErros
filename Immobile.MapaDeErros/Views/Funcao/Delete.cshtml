@@ -1,0 +1,63 @@
+@model Immobile.MapaDeErros.Models.Funcao
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Tem certeza que deseja excluir essa função?</h3>
+<div>
+    <h4>Função</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataCriacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataCriacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataAtivacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataAtivacao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDesativacao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDesativacao)
+        </dd>
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>
